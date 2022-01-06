@@ -2,12 +2,8 @@ package com.example.myproject2;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
-import android.util.Log;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.EditText;
-import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -30,7 +26,7 @@ import com.google.firebase.database.ValueEventListener;
 public class log_in extends AppCompatActivity {
 
     private static final String TAG = "anurag";
-    EditText et1, et2;
+    EditText mobile, et2;
     FirebaseAuth firebaseAuth;
 
 
@@ -40,8 +36,7 @@ public class log_in extends AppCompatActivity {
         setContentView(R.layout.log_in);
         //  getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-        et1 = findViewById(R.id.userName);
-        et2 = findViewById(R.id.password);
+        mobile = findViewById(R.id.user_mobile);
         firebaseAuth=FirebaseAuth.getInstance();
 
 
@@ -59,9 +54,9 @@ public class log_in extends AppCompatActivity {
 
 
     private boolean validateName() {
-        String val = et1.getEditableText().toString();
+        String val = mobile.getEditableText().toString();
         if (val.isEmpty()) {
-            et1.setError("Field can not be empty");
+            mobile.setError("Field can not be empty");
             return false;
         } else {
             et2.setError(null);
@@ -105,7 +100,7 @@ public class log_in extends AppCompatActivity {
 
     private void user() {
 
-        String userEmail = et1.getEditableText().toString().trim();
+        String userEmail = mobile.getEditableText().toString().trim();
         String userPassword = et2.getEditableText().toString().trim();
 
         firebaseAuth.signInWithEmailAndPassword(userEmail,userPassword).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
