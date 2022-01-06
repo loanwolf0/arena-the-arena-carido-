@@ -59,8 +59,8 @@ public class user_profile extends AppCompatActivity {
 //                Intent intent = new Intent(user_profile.this,log_in.class);
 //                startActivity(intent);
 
-                Intent intent =new Intent(user_profile.this,user_Edit_profile.class);
-                startActivity(intent);
+                Intent i =new Intent(user_profile.this,user_Edit_profile.class);
+                startActivity(i);
 
 
 //                Dexter.withContext(user_profile.this).withPermission(Manifest.permission.READ_EXTERNAL_STORAGE)
