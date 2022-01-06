@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+
+    <group android:checkableBehavior="single">
+
+    <item
+        android:title="profile"
+        android:id="@+id/user_profile"
+        android:icon="@drawable/ic_baseline_face_24"
+        />
+
+    <item
+
+        android:title="search"
+        android:id="@+id/search"
+        android:icon="@drawable/ic_baseline_search_24"
+
+        />
+
+        <item android:title="Log Out">
+            <menu>
+
+                <item
+                android:title="log_out"
+                android:icon="@drawable/ic_baseline_exit_to_app_24"
+                android:id="@+id/log_out" />
+
+            </menu>
+
+
+        </item>
+
+    </group>
+
+
+
+</menu>

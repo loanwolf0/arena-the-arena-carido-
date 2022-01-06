@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".home"
+    tools:openDrawer="start"
+    android:id="@+id/drawer">
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+
+            >
+
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:title="myproject_2"
+                android:background="@drawable/border_1"
+                android:id="@+id/nav_toolobar"
+
+
+                />
+        </RelativeLayout>
+
+            <com.google.android.material.navigation.NavigationView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/border_1"
+                android:id="@+id/navigation"
+                android:padding="15dp"
+                android:layout_gravity="start"
+                app:headerLayout="@layout/my_headerf"
+                app:menu="@menu/main_menu">
+
+
+
+
+            </com.google.android.material.navigation.NavigationView>
+
+
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

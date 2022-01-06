@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:title="Home"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:id="@+id/navigation_home"
+        app:showAsAction="always"
+        />
+
+    <item
+        android:title="Edit photo"
+        android:icon="@drawable/ic_baseline_brush_24"
+        app:showAsAction="always"
+        android:id="@+id/navigation_editPhoto"
+        />
+
+    <item
+        android:title="Search"
+        android:icon="@drawable/ic_baseline_search_24"
+        app:showAsAction="always"
+        android:id="@+id/navigation_search"
+        />
+
+    <item
+        android:title="Profile"
+        android:icon="@drawable/ic_baseline_face_24"
+        app:showAsAction="always"
+        android:id="@+id/navigation_profile"
+        />
+
+
+
+</menu>

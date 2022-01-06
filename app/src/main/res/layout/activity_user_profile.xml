@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".user_profile">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/customWhite"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:background="@color/custom_black"
+            android:padding="20dp">
+
+            <LinearLayout
+                android:layout_width="180dp"
+                android:layout_height="220dp"
+                android:id="@+id/linear"
+                android:background="@drawable/custom_edit_style"
+                android:orientation="vertical"
+                android:gravity="center">
+
+            <ImageView
+                android:id="@+id/profile_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:visibility="visible"
+                android:src="@drawable/ic_baseline_add_a_photo_24"
+                android:background="@drawable/custom_edit_style"
+
+                />
+
+                <ImageButton
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:text="choose image"
+                    android:visibility="gone"
+                    android:background="@drawable/ic_baseline_add_a_photo_24"
+                    android:id="@+id/choose_image"
+
+
+                    />
+                <ImageButton
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:text=""
+                    android:visibility="gone"
+                    android:layout_marginTop="30dp"
+
+                    android:background="@drawable/ic_baseline_close_24"
+                    android:id="@+id/do_not_add_profile_pic"
+
+                    />
+
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/full_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@id/linear"
+                android:text="prabrl shukla "
+                android:textColor="@color/customWhite"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/nic_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/full_name"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@id/linear"
+                android:includeFontPadding="false"
+                android:text="Anurag shukla "
+                android:textColor="@color/customWhite"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="hi im anurag shuklahi im anurag shuklahi im anurag"
+                android:layout_below="@id/nic_name"
+                android:layout_toRightOf="@id/linear"
+                android:layout_marginLeft="15dp"
+                android:textColor="@color/customWhite"
+                android:layout_marginTop="20dp"
+                android:id="@+id/user_bio"/>
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-70dp"
+            android:padding="20dp"
+            >
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_margin="10dp"
+
+
+                android:layout_weight=".8"
+
+                app:cardBackgroundColor="@color/customWhite"
+                app:cardElevation="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/custom_edit_style">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/custom_edit_style"
+                        android:id="@+id/user_pic_2"/>
+
+                    <ImageView
+                        android:id="@+id/payment_lable"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:includeFontPadding="false"
+                        android:src="@drawable/ic_baseline_add_a_photo_24"
+                        android:textColor="@color/customWhite"
+                        android:textSize="20sp" />
+
+
+
+
+                </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_margin="10dp"
+
+
+                android:layout_weight=".8"
+
+                app:cardBackgroundColor="@color/customWhite"
+                app:cardElevation="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/custom_edit_style"
+                    >
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerHorizontal="true"
+                        android:id="@+id/user_pic_3"
+                        android:background="@drawable/custom_edit_style"/>
+
+                    <ImageView
+                        android:id="@+id/payment_lable_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:includeFontPadding="false"
+                        android:src="@drawable/ic_baseline_add_a_photo_24"
+                        android:textColor="@color/customWhite"
+                        android:textSize="20sp" />
+
+
+                </RelativeLayout>
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="18dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:hint="full name "
+                app:hintTextColor="@color/customWhite">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_baseline_perm_identity_24"
+                    android:drawablePadding="10dp"
+                    android:text="my name " />
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:hint="mobil no "
+                app:hintTextColor="@color/customWhite">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_baseline_phone_24"
+                    android:drawablePadding="10dp"
+                    android:text="1234567890" />
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:hint="email "
+                app:hintTextColor="@color/customWhite">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_baseline_email_24"
+                    android:drawablePadding="10dp"
+                    android:text="1234567890@gmail.com" />
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:hint="password "
+                app:hintTextColor="@color/customWhite">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_baseline_lock_24"
+                    android:drawablePadding="10dp"
+                    android:text="1234567890@#" />
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/custom_style"
+                android:text=" Edit Profile "
+                android:textSize="20sp"
+                android:id="@+id/wants_to_edit_profile"/>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</ScrollView>
+
