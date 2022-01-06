@@ -47,7 +47,8 @@
                     android:autoSizeMaxTextSize="22dp"
                     android:background="@drawable/custom_edit_style"
                     android:gravity="center_vertical"
-                    android:hint="Email "
+                    android:hint=" mobile "
+                    android:textStyle="bold"
                     android:inputType="textEmailAddress"
                     android:textColor="@color/custom_black"
                     android:textColorHint="@color/customWhite" />

@@ -59,8 +59,8 @@ public class user_profile extends AppCompatActivity {
 //                Intent intent = new Intent(user_profile.this,log_in.class);
 //                startActivity(intent);
 
-                Intent i =new Intent(user_profile.this,user_Edit_profile.class);
-                startActivity(i);
+                Intent intent =new Intent(user_profile.this,user_Edit_profile.class);
+                startActivity(intent);
 
 
 //                Dexter.withContext(user_profile.this).withPermission(Manifest.permission.READ_EXTERNAL_STORAGE)
@@ -180,15 +180,15 @@ public class user_profile extends AppCompatActivity {
 //    }
 //
 //
-//    public void show_profile_pic(View v) {
+//    public void show_profile_pic(View view) {
 //
 //
 //    }
 //
-//    public void do_not_add_profile_pic(View v) {
-//        choose_image.setVisibility(v.GONE);
+//    public void do_not_add_profile_pic(View view) {
+//        choose_image.setVisibility(view.GONE);
 //        close.setVisibility(View.GONE);
-//        profile.setVisibility(v.VISIBLE);
+//        profile.setVisibility(view.VISIBLE);
 //
 //    }
 
