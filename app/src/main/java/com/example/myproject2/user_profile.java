@@ -52,7 +52,7 @@ public class user_profile extends AppCompatActivity {
         update = findViewById(R.id.wants_to_edit_profile);
         update.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View v) {
                 Toast.makeText(user_profile.this, "update clicked", Toast.LENGTH_SHORT).show();
 //                FirebaseAuth .getInstance().signOut();
 //
@@ -180,15 +180,15 @@ public class user_profile extends AppCompatActivity {
 //    }
 //
 //
-//    public void show_profile_pic(View view) {
+//    public void show_profile_pic(View v) {
 //
 //
 //    }
 //
-//    public void do_not_add_profile_pic(View view) {
-//        choose_image.setVisibility(view.GONE);
+//    public void do_not_add_profile_pic(View v) {
+//        choose_image.setVisibility(v.GONE);
 //        close.setVisibility(View.GONE);
-//        profile.setVisibility(view.VISIBLE);
+//        profile.setVisibility(v.VISIBLE);
 //
 //    }
 
