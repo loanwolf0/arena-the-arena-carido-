@@ -52,7 +52,7 @@ public class user_profile extends AppCompatActivity {
         update = findViewById(R.id.wants_to_edit_profile);
         update.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View view) {
                 Toast.makeText(user_profile.this, "update clicked", Toast.LENGTH_SHORT).show();
 //                FirebaseAuth .getInstance().signOut();
 //
