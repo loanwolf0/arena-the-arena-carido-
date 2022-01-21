@@ -17,15 +17,9 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="300dp"
+            android:layout_height="250dp"
             android:background="@drawable/ic_undraw_new_entries_re_cffr"
             >
-
-
-
-
-
-
 
         </LinearLayout>
 
@@ -33,7 +27,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_gravity="center_horizontal"
-            android:layout_weight="9"
+            android:layout_weight="7"
             android:orientation="vertical"
 
             >
@@ -110,18 +104,19 @@
                 app:passwordToggleEnabled="true">
 
                 <EditText
-                    android:id="@+id/new_user_password"
+                    android:id="@+id/new_user_age"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:background="@drawable/custom_edit_style"
                     android:gravity="center_vertical"
-                    android:hint="Create a password"
-                    android:inputType="text"
+                    android:hint="Age"
+                    android:inputType="phone"
                     android:textAllCaps="true"
                     android:textColor="@color/custom_black"
                     android:textColorHint="@color/customWhite"
                     android:textSize="15sp"
+                    android:maxLength="2"
                     android:textStyle="normal" />
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -133,9 +128,43 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_marginTop="40dp"
-            android:layout_weight="1.8"
+            android:layout_weight="3"
             android:orientation="vertical">
 
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/text_in_logIn"
+                android:text=" Already Have An Account ? "
+                android:textColor="@color/white"
+                android:textStyle="italic"
+                android:textSize="17sp"
+                android:layout_marginTop="6dp"
+                android:layout_marginLeft="50dp"
+
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/sign_in"
+                android:text=" LOG IN "
+                android:textColor="@color/arena_logo"
+                android:layout_toRightOf="@id/text_in_logIn"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="10dp"
+                android:textStyle="bold"
+                android:textSize="19dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                />
+            </RelativeLayout>
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"

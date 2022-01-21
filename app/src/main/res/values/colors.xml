@@ -16,4 +16,8 @@
     <color name="red">#FF0505</color>
     <color name="white">#ffffff</color>
     <color name="custom_pink">#9F616A</color>
+
+    <color name="arena_logo">#6cbc44</color>
+
+
 </resources>
