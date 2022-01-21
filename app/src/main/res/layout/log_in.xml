@@ -4,51 +4,64 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/custom_black"
+    android:padding="20dp"
    >
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/custom_black"
+        android:orientation="vertical">
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:src="@drawable/ic_undraw_login_re_4vu2"
+                android:id="@+id/log_in_pic"/>
 
-
-
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/user_mobile_material">
 
             <EditText
-                android:id="@+id/user_mobile"
+                android:id="@+id/user_Eamil"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="350dp"
-                android:background="@drawable/custom_edit_style"
+                android:layout_marginTop="50dp"
+                android:layout_below="@id/log_in_pic"
                 android:gravity="center_vertical"
-                android:hint=" Mobile "
-                android:inputType="phone"
-                android:maxLength="10"
-                android:textColor="@color/custom_black"
+                android:hint=" Email "
+                android:inputType="textEmailAddress"
+                android:textColor="@color/customWhite"
                 android:textColorHint="@color/customWhite"
-                android:textSize="15sp"
-
+                android:textSize="19sp"
                 android:textStyle="bold"
 
                 />
-        </com.google.android.material.textfield.TextInputLayout>
+            <EditText
+                android:id="@+id/user_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/user_Eamil"
+                android:hint=" Password "
+                android:inputType="textPassword"
+                android:maxLength="10"
+                android:textColor="@color/customWhite"
+                android:textColorHint="@color/customWhite"
+                android:textSize="19sp"
+                android:textStyle="bold"
 
+                />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/text_in_signIn"
+                android:id="@+id/do_have_an_account"
                 android:text=" Don't Have An Account ? "
-                android:layout_below="@id/user_mobile_material"
-                android:textColor="@color/white"
+                android:layout_below="@id/user_password"
+                android:textColor="@color/purple_200"
                 android:textStyle="italic"
                 android:textSize="17sp"
                 android:layout_marginTop="6dp"
@@ -59,22 +72,22 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/sign_in"
-                android:text=" SIGN IN "
+                android:id="@+id/logIn"
+                android:text=" Forget Password "
                 android:textColor="@color/arena_logo"
-                android:layout_toRightOf="@id/text_in_signIn"
-                android:layout_below="@id/user_mobile_material"
+                android:layout_toRightOf="@id/do_have_an_account"
+                android:layout_below="@id/user_password"
                 android:layout_marginTop="5dp"
                 android:layout_marginLeft="10dp"
                 android:textStyle="bold"
-                android:textSize="19dp"
+                android:textSize="15dp"
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
                 />
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_below="@id/sign_in"
+                android:layout_below="@id/logIn"
                 android:layout_marginTop="15dp"
                 android:id="@+id/view"
                 android:background="@color/customWhite"
@@ -88,10 +101,22 @@
                 android:layout_below="@id/view"
                 android:layout_marginTop="10dp"
                 android:clickable="true"
-                android:text=" Get Otp"
+                android:text=" LOg in "
                 android:background="@drawable/custom_style"
                 android:textSize="22dp" />
+
+
+
         </RelativeLayout>
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/log_in"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:id="@+id/progress_bar"
+            android:visibility="invisible"/>
 
 
     </LinearLayout>
