@@ -1,51 +1,1411 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".home"
-    tools:openDrawer="start"
-    android:id="@+id/drawer">
+    android:background="@color/customWhite"
+    tools:context=".home">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/custom_black"
+        android:orientation="vertical">
 
-
-        <RelativeLayout
+        <soup.neumorphism.NeumorphCardView
             android:layout_width="match_parent"
+            android:layout_height="225dp"
+            app:neumorph_backgroundColor="@color/light_white"
+            app:neumorph_shadowColorDark="@color/custom_black"
+            app:neumorph_shadowColorLight="@color/custom_black"
+            app:neumorph_shapeType="flat">
+
+            <TextView
+                style="@style/Widget.Neumorph.TextView"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_margin="10dp"
+                android:gravity="center_vertical"
+                android:text="Today's progress"
+                android:textColor="@color/custom_black"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_marginTop="60dp"
+                android:orientation="horizontal"
+                android:weightSum="5">
+
+                <!--            this is the design for every live tracker-->
+
+                <!--            card view 1 -->
+
+                <soup.neumorphism.NeumorphCardView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    app:neumorph_backgroundColor="@color/supernova"
+                    app:neumorph_shadowColorDark="@color/dark_blue_1"
+                    app:neumorph_shadowColorLight="@color/dark_blue_1"
+                    app:neumorph_shapeType="flat"
+
+
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/live_steps"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="live"
+                            android:textColor="@color/custom_black"
+                            android:textSize="50sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:text="steps"
+                            android:textColor="@color/custom_black"
+                            android:textSize="20sp" />
+
+
+                    </LinearLayout>
+
+                </soup.neumorphism.NeumorphCardView>
+
+                <!--            card view 2 -->
+
+                <soup.neumorphism.NeumorphCardView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.5"
+                    app:neumorph_backgroundColor="@color/supernova"
+                    app:neumorph_shadowColorDark="@color/dark_blue_1"
+                    app:neumorph_shadowColorLight="@color/dark_blue_1"
+                    app:neumorph_shapeType="flat"
+
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/live_cal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="live"
+                            android:textColor="@color/custom_black"
+                            android:textSize="40sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:text="cal"
+                            android:textSize="20sp" />
+
+
+                    </LinearLayout>
+
+                </soup.neumorphism.NeumorphCardView>
+
+                <!--            card view 3 -->
+
+                <soup.neumorphism.NeumorphCardView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.5"
+                    app:neumorph_backgroundColor="@color/supernova"
+                    app:neumorph_shadowColorDark="@color/dark_blue_1"
+                    app:neumorph_shadowColorLight="@color/dark_blue_1"
+                    app:neumorph_shapeType="flat">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/live_km"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="live"
+                            android:textColor="@color/custom_black"
+                            android:textSize="40sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:text="km"
+                            android:textSize="20sp" />
+
+
+                    </LinearLayout>
+
+
+                </soup.neumorphism.NeumorphCardView>
+
+
+            </LinearLayout>
+
+        </soup.neumorphism.NeumorphCardView>
+
+
+        <!--        we are creating live counter for steps , cal and km -->
+
+
+        <!--        we done the live tracker design-->
+
+
+        <!--        ***************** start designing for  coin view ***********************-->
+
+        <soup.neumorphism.NeumorphCardView
+            android:layout_width="match_parent"
+            android:layout_height="280dp"
+            app:neumorph_backgroundColor="@color/custom_black"
+            app:neumorph_shadowColorDark="@color/custom_black"
+            app:neumorph_shadowColorLight="@color/custom_black"
+            app:neumorph_shapeType="flat">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <!--            Here we design the coin view and extend limit design section -->
+
+                <LinearLayout
+                    android:id="@+id/coinView_and_extendLimit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/supernova"
+                    android:weightSum="5">
+
+
+                    <TextView
+                        android:id="@+id/your_coins"
+                        style="@style/Widget.Neumorph.TextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_weight="2"
+                        android:padding="10dp"
+                        android:text="Your coins"
+                        android:textColor="@color/custom_black"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <!--                    this text view for managing the extra space -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+
+                    <LinearLayout
+                        android:id="@+id/Extend_limit_linearLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="35dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_weight="2"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:id="@+id/extend_limit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toLeftOf="@id/Extend_limit_linearLayout"
+                            android:text="EXTEND LIMIT "
+                            android:textColor="@color/arena_logo"
+                            android:textSize="20sp"
+                            android:textStyle="bold|italic" />
+
+                        <TextView
+                            android:id="@+id/live_extend_limit"
+                            style="@style/Widget.Neumorph.TextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toLeftOf="@id/Extend_limit_linearLayout"
+                            android:text=" 0"
+                            android:textColor="@color/arena_logo"
+                            android:textSize="25sp"
+                            android:textStyle="bold|italic" />
+
+                        <TextView
+                            style="@style/Widget.Neumorph.TextView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="/3"
+                            android:textColor="@color/arena_logo"
+                            android:textSize="20sp"
+                            android:textStyle="bold|italic" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <!--                We done the design of your coin view and extend limit section  -->
+
+
+                <!--                we are going to create a circular progress bar -->
+
+                <LinearLayout
+                    android:id="@+id/circular_progressBar_and_earned_coins"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_below="@id/coinView_and_extendLimit"
+                    android:weightSum="2">
+
+                    <!--                    this is the design for circular progress bar we use first linear
+                                            layout for managing the width , we give layout width sum 2 and
+                                            provide 1 layout width for each linear layout  -->
+
+
+                    <!--                    linear layout  1 -->
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1">
+
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <ProgressBar
+                                android:id="@+id/progress_bar"
+                                style="@style/CircularDeterminateProgressBar"
+                                android:layout_width="200dp"
+                                android:layout_height="200dp"
+                                android:layout_marginLeft="-15dp"
+                                android:indeterminateOnly="false"
+                                android:progress="60"
+                                android:progressDrawable="@drawable/circular_state_progress_bar"
+                                android:rotation="-90"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+
+                                tools:progress="60" />
+
+                            <TextView
+                                android:id="@+id/text_view_progress"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                                android:textColor="@color/customWhite"
+                                app:layout_constraintBottom_toBottomOf="@+id/progress_bar"
+                                app:layout_constraintEnd_toEndOf="@+id/progress_bar"
+                                app:layout_constraintStart_toStartOf="@+id/progress_bar"
+                                app:layout_constraintTop_toTopOf="@+id/progress_bar"
+                                tools:text="60%" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </LinearLayout>
+
+                    <!--                    linear layout  2 -->
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="5dp"
+                            android:padding="19dp">
+
+
+                            <ImageView
+                                android:id="@+id/coins_logo"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_alignTop="@id/coins_live"
+                                android:layout_marginTop="15dp"
+                                android:src="@drawable/coins" />
+
+                            <TextView
+                                android:id="@+id/coins_live"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignRight="@id/coins_logo"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginTop="12dp"
+                                android:text="334"
+                                android:textColor="@color/white"
+                                android:textSize="80sp" />
+
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <!--                  we done the designing part of circular view and coins
+                                      earn of day -->
+
+
+            </RelativeLayout>
+
+        </soup.neumorphism.NeumorphCardView>
+
+        <!--     we are going to design the Level instruction for our user-->
+
+
+        <!--        **************  here we design the level ,
+                                    know more and some instruction. *****************************************-->
+
+        <soup.neumorphism.NeumorphCardView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            app:neumorph_backgroundColor="@color/supernova"
+            app:neumorph_shadowColorDark="@color/custom_black"
+            app:neumorph_shadowColorLight="@color/custom_black"
+            app:neumorph_shapeType="flat">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <!--            this is showing the levels and know more option-->
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/circular_progressBar_and_earned_coins"
+                        android:padding="10dp">
+
+
+                        <LinearLayout
+                            android:id="@+id/level_linearLayout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                style="@style/Widget.Neumorph.TextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="LEVEL"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/live_level"
+                                style="@style/Widget.Neumorph.TextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:text="1"
+                                android:textSize="30sp"
+                                android:textStyle="italic|bold" />
+
+
+                        </LinearLayout>
+
+
+                        <TextView
+                            android:id="@+id/know_more"
+                            style="@style/Widget.Neumorph.TextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@id/level_linearLayout"
+                            android:layout_alignParentRight="true"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="10dp"
+                            android:text="KNOW MORE"
+                            android:textColor="@color/arena_logo"
+                            android:textSize="20sp"
+                            android:textStyle="italic|bold" />
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <!--                we done the design of showing the levels
+                                    and know more option-->
+
+                <!--                instruction for user -->
+
+                <TextView
+                    style="@style/Widget.Neumorph.TextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/light_white"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:text=" Reach the target , for 3 day's in a row , to upgrade to next level ."
+                    android:textSize="15sp"
+                    android:textStyle="italic" />
+
+                <!--                done for instruction for user -->
+
+            </LinearLayout>
+
+
+        </soup.neumorphism.NeumorphCardView>
+
+
+        <!--        we done , for designing part of level , know more , and instruction -->
+
+
+        <!--        ************ total coins and total steps *************************-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:weightSum="2">
+
+            <!--                here we are going to design for total coins -->
+
+            <soup.neumorphism.NeumorphCardView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:neumorph_backgroundColor="@color/supernova"
+                app:neumorph_shadowColorDark="@color/custom_black"
+                app:neumorph_shadowColorLight="@color/custom_black">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:weightSum="2">
+
+                    <!--                    1 st layout -->
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1.2"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:id="@+id/coins_logo_2"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginTop="8dp"
+                            android:src="@drawable/coins" />
+
+                        <TextView
+                            android:id="@+id/coins_live_2"
+                            style="@style/Widget.Neumorph.TextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toRightOf="@id/coins_logo_2"
+                            android:text="334"
+                            android:textSize="40sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <!--                    2 nd layout-->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight=".8"
+                        android:background="@color/light_white"
+                        android:padding="10dp">
+
+                        <TextView
+                            style="@style/Widget.Neumorph.TextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="35dp"
+                            android:text="Coins"
+                            android:textColor="@color/custom_black"
+                            android:textSize="25sp"
+                            android:textStyle="italic|bold" />
+
+                        <ImageView
+                            android:layout_width="30sp"
+                            android:layout_height="30sp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:src="@drawable/ic_baseline_keyboard_arrow_right_24" />
+
+                        <ImageView
+                            android:layout_width="30sp"
+                            android:layout_height="30sp"
+                            android:layout_marginLeft="-20sp"
+                            android:layout_marginTop="5dp"
+                            android:src="@drawable/ic_baseline_keyboard_arrow_right_24" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </soup.neumorphism.NeumorphCardView>
+
+            <!--                we completed the design part of total coins -->
+
+            <!--            here we are going to design for total steps -->
+
+            <soup.neumorphism.NeumorphCardView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:neumorph_backgroundColor="@color/supernova"
+                app:neumorph_shadowColorDark="@color/custom_black"
+                app:neumorph_shadowColorLight="@color/custom_black">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:weightSum="2">
+
+                    <!--                    1 st layout -->
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1.2"
+                        android:padding="10dp">
+
+
+                        <TextView
+                            android:id="@+id/live_steps_2"
+                            style="@style/Widget.Neumorph.TextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginLeft="5dp"
+                            android:text="1.5 m"
+                            android:textSize="40sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <!--                    2 nd layout-->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight=".8"
+                        android:background="@color/light_white"
+                        android:padding="10dp">
+
+                        <TextView
+                            style="@style/Widget.Neumorph.TextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="35dp"
+                            android:text="Steps"
+                            android:textColor="@color/custom_black"
+                            android:textSize="25sp"
+                            android:textStyle="italic|bold" />
+
+                        <ImageView
+                            android:layout_width="30sp"
+                            android:layout_height="30sp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:src="@drawable/ic_baseline_keyboard_arrow_right_24" />
+
+                        <ImageView
+                            android:layout_width="30sp"
+                            android:layout_height="30sp"
+                            android:layout_marginLeft="-20sp"
+                            android:layout_marginTop="5dp"
+                            android:src="@drawable/ic_baseline_keyboard_arrow_right_24" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </soup.neumorphism.NeumorphCardView>
+
+            <!--            we completed the design part of total steps -->
+
+
+        </LinearLayout>
+
+        <!--       we done , for designing part of total coins and steps  -->
+
+        <TextView
+            style="@style/Widget.Neumorph.TextView"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="10dp"
+            android:paddingLeft="20sp"
+            android:paddingTop="10dp"
+            android:text="Earn extra coins "
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/customWhite"
+            />
 
-            >
 
-            <androidx.appcompat.widget.Toolbar
+
+        <!--        ************* earn more coins *************************-->
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:layout_marginTop="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <soup.neumorphism.NeumorphCardView
+                    android:layout_width="320dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="8dp"
+                    app:neumorph_backgroundColor="@color/supernova"
+                    app:neumorph_shadowColorDark="@color/custom_black"
+                    app:neumorph_shadowColorLight="@color/custom_black"
+                    app:neumorph_shapeType="flat">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/daily_rewards"
+                                style="@style/Widget.Neumorph.TextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="20sp"
+                                android:paddingTop="10dp"
+                                android:text="Daily reward"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:id="@+id/coins_logo_3"
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_toLeftOf="@id/ads_coins"
+                                android:src="@drawable/coins" />
+
+                            <TextView
+                                android:id="@+id/ads_coins"
+                                style="@style/Widget.Neumorph.TextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:paddingTop="10dp"
+                                android:paddingRight="20sp"
+                                android:text="05"
+                                android:textSize="30sp"
+                                android:textStyle="italic|bold" />
+
+
+                            <TextView
+                                android:id="@+id/ads_coins_instruction"
+                                style="@style/Widget.Neumorph.TextView"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/ads_coins"
+                                android:layout_marginTop="5dp"
+                                android:paddingLeft="20dp"
+                                android:paddingRight="20dp"
+                                android:text="Earn 5 coins per day by claiming all 5 rewards"
+                                android:textSize="15sp"
+
+                                android:textStyle="italic" />
+
+                            <RelativeLayout
+                                android:id="@+id/ads_coins_live"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/ads_coins_instruction"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginTop="5dp"
+                                android:paddingRight="10dp"
+
+                                >
+
+                                <TextView
+                                    style="@style/Widget.Neumorph.TextView"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:text="GET REWARD"
+                                    android:textColor="@color/arena_logo"
+                                    android:textSize="20sp"
+                                    android:textStyle="italic|bold" />
+
+
+                            </RelativeLayout>
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </soup.neumorphism.NeumorphCardView>
+
+                <soup.neumorphism.NeumorphCardView
+                    android:layout_width="320dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="8dp"
+                    app:neumorph_backgroundColor="@color/supernova"
+                    app:neumorph_shadowColorDark="@color/custom_black"
+                    app:neumorph_shadowColorLight="@color/custom_black"
+                    app:neumorph_shapeType="flat">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/extend_limit_2"
+                                style="@style/Widget.Neumorph.TextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="20sp"
+                                android:paddingTop="10dp"
+                                android:text="Extend Limit"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:id="@+id/coins_logo_4"
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_toLeftOf="@id/live_extend_limit_2"
+                                android:src="@drawable/coins" />
+
+                            <TextView
+                                android:id="@+id/live_extend_limit_2"
+                                style="@style/Widget.Neumorph.TextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:paddingTop="10dp"
+                                android:paddingRight="20sp"
+                                android:text="03"
+                                android:textSize="30sp"
+                                android:textStyle="italic|bold" />
+
+
+                            <TextView
+                                android:id="@+id/limit_extend_instruction"
+                                style="@style/Widget.Neumorph.TextView"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/live_extend_limit_2"
+                                android:layout_marginTop="5dp"
+                                android:paddingLeft="20dp"
+                                android:paddingRight="20dp"
+                                android:text="Earn 3 coins more than your Daily Limit every day (by walking)"
+                                android:textSize="15sp"
+
+                                android:textStyle="italic" />
+
+                            <RelativeLayout
+                                android:id="@+id/extend_limit_3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/limit_extend_instruction"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginTop="5dp"
+                                android:paddingRight="10dp">
+
+                                <TextView
+                                    style="@style/Widget.Neumorph.TextView"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:text="EXTEND LIMIT"
+                                    android:textColor="@color/arena_logo"
+                                    android:textSize="20sp"
+                                    android:textStyle="italic|bold" />
+
+
+                            </RelativeLayout>
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </soup.neumorphism.NeumorphCardView>
+
+                <soup.neumorphism.NeumorphCardView
+                    android:layout_width="320dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="8dp"
+                    app:neumorph_backgroundColor="@color/supernova"
+                    app:neumorph_shadowColorDark="@color/custom_black"
+                    app:neumorph_shadowColorLight="@color/custom_black"
+                    app:neumorph_shapeType="flat">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/share_app"
+                                style="@style/Widget.Neumorph.TextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="20sp"
+                                android:paddingTop="10dp"
+                                android:text="Invite a friend"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:id="@+id/coins_logo_5"
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_toLeftOf="@id/share_coins"
+                                android:src="@drawable/coins" />
+
+                            <TextView
+                                android:id="@+id/share_coins"
+                                style="@style/Widget.Neumorph.TextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:paddingTop="10dp"
+                                android:paddingRight="20sp"
+                                android:text="50"
+                                android:textSize="30sp"
+                                android:textStyle="italic|bold" />
+
+
+                            <TextView
+                                android:id="@+id/share_coins_instruction"
+                                style="@style/Widget.Neumorph.TextView"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/share_coins"
+                                android:layout_marginTop="5dp"
+                                android:paddingLeft="20dp"
+                                android:paddingRight="20dp"
+                                android:text="Get rewarded with 50 coins for every friend you invite"
+                                android:textSize="15sp"
+
+                                android:textStyle="italic" />
+
+                            <RelativeLayout
+                                android:id="@+id/share_coins_live"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/share_coins_instruction"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginTop="5dp"
+                                android:paddingRight="10dp">
+
+                                <TextView
+                                    style="@style/Widget.Neumorph.TextView"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:text="INVITE NOW"
+                                    android:textColor="@color/arena_logo"
+                                    android:textSize="20sp"
+                                    android:textStyle="italic|bold" />
+
+
+                            </RelativeLayout>
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </soup.neumorphism.NeumorphCardView>
+
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+        <!--        **************** we completed the design part of earn more coins ********************************-->
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+<!--            your history text and button created -->
+
+            <soup.neumorphism.NeumorphCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:title="myproject_2"
-                android:background="@drawable/border_1"
-                android:id="@+id/nav_toolobar"
+                app:neumorph_backgroundColor="@color/custom_black"
+                app:neumorph_shadowColorDark="@color/custom_black"
+                app:neumorph_shadowColorLight="@color/custom_black"
+                app:neumorph_shapeType="flat">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="@color/supernova">
+
+                    <TextView
+                        style="@style/Widget.Neumorph.TextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="Your past 7 days"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/custom_black"
+                        android:textSize="20sp"
+                        android:textStyle="bold"/>
+
+
+                    <TextView
+                        android:id="@+id/view_history"
+                        style="@style/Widget.Neumorph.TextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:text="VIEW HISTORY"
+                        android:layout_marginRight="10dp"
+                        android:textColor="@color/arena_logo"
+                        android:textSize="20sp"
+                        android:textStyle="bold|italic"/>
+
+
+                </RelativeLayout>
+
+                <TextView
+                    style="@style/Widget.Neumorph.TextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/light_white"
+                    android:text=" Steps history "
+                    android:gravity="center_vertical"
+                    android:layout_below="@id/view_history"
+                    android:textSize="15sp"
+                    android:paddingLeft="10dp"
+                    android:textStyle="italic"
+                    android:textColor="@color/custom_black"/>
+
+                </LinearLayout>
+
+            </soup.neumorphism.NeumorphCardView>
+
+
+<!--            we done for your history text and button -->
+
+<!--                we are going to design days name and bar history -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="333dp"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                >
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/day_1"
+                        style="@style/Widget.Neumorph.TextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Sun"
+                        android:gravity="center_horizontal"
+                        android:textColor="@color/customWhite"
+                        android:textSize="15sp"
+                        android:textStyle="normal"/>
+
+                    <ProgressBar
+                        android:id="@+id/progress_bar_history_1"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="20dp"
+                        android:layout_height="200dp"
+                        android:layout_gravity="bottom"
+                        android:layout_margin="15dp"
+                        android:layout_marginTop="10dp"
+                        android:progressDrawable="@drawable/progress_bar" />
+
+                    <TextView
+                        android:id="@+id/day_1_dis"
+                        style="@style/Widget.Neumorph.TextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="7.5k"
+                        android:gravity="center_horizontal"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:textStyle="normal"/>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/day_2"
+                        style="@style/Widget.Neumorph.TextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Mon"
+                        android:gravity="center_horizontal"
+                        android:textColor="@color/customWhite"
+                        android:textSize="15sp"
+                        android:textStyle="normal"/>
+
+                    <ProgressBar
+                        android:id="@+id/progress_bar_history_2"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="20dp"
+                        android:layout_height="200dp"
+                        android:layout_gravity="bottom"
+                        android:layout_margin="15dp"
+                        android:layout_marginTop="10dp"
+                        android:progressDrawable="@drawable/progress_bar" />
+
+                    <TextView
+                        android:id="@+id/day_2_dis"
+                        style="@style/Widget.Neumorph.TextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="4.6k"
+                        android:gravity="center_horizontal"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:textStyle="normal"/>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/day_3"
+                        style="@style/Widget.Neumorph.TextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Tue"
+                        android:gravity="center_horizontal"
+                        android:textColor="@color/customWhite"
+                        android:textSize="15sp"
+                        android:textStyle="normal"/>
+
+                    <ProgressBar
+                        android:id="@+id/progress_bar_history_3"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="20dp"
+                        android:layout_height="200dp"
+                        android:layout_gravity="bottom"
+                        android:layout_margin="15dp"
+                        android:layout_marginTop="10dp"
+                        android:progressDrawable="@drawable/progress_bar" />
+
+                    <TextView
+                        android:id="@+id/day_3_dis"
+                        style="@style/Widget.Neumorph.TextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="2.3k"
+                        android:gravity="center_horizontal"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:textStyle="normal"/>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/day_4"
+                        style="@style/Widget.Neumorph.TextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Wed"
+                        android:gravity="center_horizontal"
+                        android:textColor="@color/customWhite"
+                        android:textSize="15sp"
+                        android:textStyle="normal"/>
+
+                    <ProgressBar
+                        android:id="@+id/progress_bar_history_4"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="20dp"
+                        android:layout_height="200dp"
+                        android:layout_gravity="bottom"
+                        android:layout_margin="15dp"
+                        android:layout_marginTop="10dp"
+                        android:progressDrawable="@drawable/progress_bar" />
+
+                    <TextView
+                        android:id="@+id/day_4_dis"
+                        style="@style/Widget.Neumorph.TextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="10.2k"
+                        android:gravity="center_horizontal"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:textStyle="normal"/>
+
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/day_5"
+                        style="@style/Widget.Neumorph.TextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Thu"
+                        android:gravity="center_horizontal"
+                        android:textColor="@color/customWhite"
+                        android:textSize="15sp"
+                        android:textStyle="normal"/>
+
+                    <ProgressBar
+                        android:id="@+id/progress_bar_history_5"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="20dp"
+                        android:layout_height="200dp"
+                        android:layout_gravity="bottom"
+                        android:layout_margin="15dp"
+                        android:layout_marginTop="10dp"
+                        android:progressDrawable="@drawable/progress_bar" />
+
+                    <TextView
+                        android:id="@+id/day_5_dis"
+                        style="@style/Widget.Neumorph.TextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="4.2k"
+                        android:gravity="center_horizontal"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:textStyle="normal"/>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/day_6"
+                        style="@style/Widget.Neumorph.TextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Fri"
+                        android:gravity="center_horizontal"
+                        android:textColor="@color/customWhite"
+                        android:textSize="15sp"
+                        android:textStyle="normal"/>
+
+                    <ProgressBar
+                        android:id="@+id/progress_bar_history_6"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="20dp"
+                        android:layout_height="200dp"
+                        android:layout_gravity="bottom"
+                        android:layout_margin="15dp"
+                        android:layout_marginTop="10dp"
+                        android:progressDrawable="@drawable/progress_bar" />
+
+                    <TextView
+                        android:id="@+id/day_6_dis"
+                        style="@style/Widget.Neumorph.TextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="8.2k"
+                        android:gravity="center_horizontal"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:textStyle="normal"/>
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/day_7"
+                        style="@style/Widget.Neumorph.TextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Sat"
+                        android:gravity="center_horizontal"
+                        android:textColor="@color/customWhite"
+                        android:textSize="15sp"
+                        android:textStyle="normal"/>
+
+                    <ProgressBar
+                        android:id="@+id/progress_bar_history_7"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="20dp"
+                        android:layout_height="200dp"
+                        android:layout_gravity="bottom"
+                        android:layout_margin="15dp"
+                        android:layout_marginTop="10dp"
+                        android:progressDrawable="@drawable/progress_bar" />
+
+                    <TextView
+                        android:id="@+id/day_7_dis"
+                        style="@style/Widget.Neumorph.TextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="18.9k"
+                        android:gravity="center_horizontal"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:textStyle="normal"/>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!--        ************* walking logo *******-->
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <pl.droidsonroids.gif.GifImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/walking_3d_2"
 
 
                 />
-        </RelativeLayout>
 
-            <com.google.android.material.navigation.NavigationView
+            <TextView
+                style="@style/Widget.Neumorph"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:background="@drawable/border_1"
-                android:id="@+id/navigation"
-                android:padding="15dp"
-                android:layout_gravity="start"
-                app:headerLayout="@layout/my_headerf"
-                app:menu="@menu/main_menu">
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="90dp"
+                android:layout_marginTop="-155dp"
+                android:text="KEEP"
+                android:textColor="@color/customBlack"
+                android:textSize="50sp"
+                android:textStyle="italic" />
+
+            <TextView
+                style="@style/Widget.Neumorph"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="150dp"
+                android:layout_marginTop="-10dp"
+                android:text="WALKING.."
+                android:textColor="@color/customBlack"
+                android:textSize="50sp"
+                android:textStyle="italic" />
 
 
+        </LinearLayout>
 
 
-            </com.google.android.material.navigation.NavigationView>
+        <!--        *********** we are going to design a bar chart for showing walking history **************************8-->
 
 
+        <!--&lt;!&ndash;            app:hdPinDrawable="@drawable/pin"&ndash;&gt;-->
+        <!--&lt;!&ndash;            app:hdProgressDisableColor="@color/progress_disable"&ndash;&gt;-->
+        <!--&lt;!&ndash;            app:hdBarTitleSelectedColor="@color/bar_title_selected_color"/>&ndash;&gt;-->
 
-    <!-- TODO: Update blank fragment layout -->
 
+    </LinearLayout>
 
-</androidx.drawerlayout.widget.DrawerLayout>
+</ScrollView>
